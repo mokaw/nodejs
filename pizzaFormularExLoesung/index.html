@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Pizza Planet order form</title>
+  </head>
+
+  <body>
+    <h2><em>Pizza Planet</em> order form</h2>
+    
+    <p>Welcome to the <em>Pizza Planet</em> home delivery service. Please make your
+      choice. There is a 50% discount if you do not receive your pizzas within 30
+      minutes.</p>
+      
+    <p>Use Order to tell us what you want.</p>
+
+    <form method="post"
+          action="/submit-order">
+
+      <fieldset><legend>Registered customers</legend>
+        <label>Name
+          <input type="text" name="theName" placeholder="Registered name here"
+                 required>
+        </label>
+        <label>Password
+          <input type="password" name="thePasswd">
+        </label>
+      </fieldset>
+
+      <fieldset><legend>Pizza</legend>
+        <fieldset><legend>Size</legend>
+          <label>
+            <input type="radio" name="theSize" value="small" required> small
+          </label>
+          <label>
+            <input type="radio" name="theSize" value="large"> large
+          </label>
+          <label>
+            <input type="radio" name="theSize" value="very large">
+            to infinity and beyond
+          </label>
+        </fieldset>
+
+        <fieldset><legend>Toppings</legend>
+          <label><input type="checkbox" name="tomato" value="tomato"> tomato</label><br>
+          <label><input type="checkbox" name="cheese" value="cheese"> cheese</label><br>
+          <label><input type="checkbox" name="peperoni" value="peperoni"> peperoni
+          </label><br>
+          <label><input type="checkbox" name="sausage" value="sausage"> sausage
+          </label><br>
+          <label><input type="checkbox" name="tuna" value="tuna"> tuna</label>
+        </fieldset>
+      </fieldset>
+
+      <p><input type="submit" value="Order"> 
+        <input type="reset" value="Clear Form"></p>
+    </form>
+  </body>
